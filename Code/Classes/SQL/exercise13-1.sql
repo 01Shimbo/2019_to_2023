@@ -1,0 +1,48 @@
+-- DROP PROCEDURE IF EXISTS dropIndexIfExists;
+--  
+-- Change the default semicolon delimiter to write a PSM
+-- (Persistent Stored Module) or stored procedure.
+-- DELIMITER $$
+--  
+-- CREATE PROCEDURE dropIndexIfExists
+-- ( pv_table_name  VARCHAR(64)
+-- , pv_index_name  VARCHAR(64))
+-- BEGIN
+--  
+--   DECLARE stmt VARCHAR(1024);
+--  
+--   SET @SQL := CONCAT('ALTER TABLE ',pv_table_name,'DROP INDEX ',pv_index_name);
+--  
+--   IF EXISTS (SELECT NULL
+--              FROM   information_schema.statistics s
+--              WHERE  s.index_schema = database()
+--              AND    s.table_name = pv_table_name
+--              AND    s.index_name = pv_index_name)
+--   THEN
+--  
+--     PREPARE stmt FROM @SQL;
+--     EXECUTE stmt;
+--     DEALLOCATE PREPARE stmt;
+--   END IF;
+--  
+-- END;
+-- $$
+--  
+-- DELIMITER ;
+-- CALL dropIndexIfExists('payment','idx_payment01');
+ALTER TABLE rental
+	ADD CONSTRAINT fk_rental_customer_id FOREIGN KEY (customer_id)
+    REFERENCES customer(custmoer_id) ON DELETE RESTRICT;
+    
+-- SELECT	CONCAT(tc.table_schema,'.',tc.table_name,'.'tc.constraint_name) As
+-- ,		CONCAT(kcu.tabel_schema,'.'.tc.table_name,'.',ksu.coulmn_name) as
+-- ,		CONCAT(kcu.referenced_table_schema,'.',kcu.referenced_tabel_name,'.') as
+-- FROM	information_schema.tabel_constraints tc JOIN information_schema.key
+-- ON		tc.constraint_name = kcu.constraint_name
+-- AND		tc.constraint_schema = kcu.constraint_schema
+-- WHERE	tc.constraint_type = 'FOREIGN KEY'
+-- AND		tc.constraint_schema = database()
+-- and		tc.tabel_name = 'rental'
+-- and 	kcu.column_name = 'customer_id'
+-- order by tc.tabel_name
+-- ,		kcu.couln_name;

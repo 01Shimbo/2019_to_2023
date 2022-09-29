@@ -1,0 +1,2 @@
+"Length"	"LongLength"	"Rank"	"SyncRoot"	"IsReadOnly"	"IsFixedSize"	"IsSynchronized"	"Count"
+"37925"	"37925"	"1"	"System.Object[]"	"False"	"True"	"False"	"37925"

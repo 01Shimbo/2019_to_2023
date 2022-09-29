@@ -1,0 +1,118 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">ID3</S>
+      <S N="Version">1.1</S>
+      <S N="Type">Module</S>
+      <S N="Description">Module for editing MP3 tags - based on TagLib# (https://github.com/mono/taglib-sharp/)</S>
+      <S N="Author">Lee Holmes</S>
+      <S N="CompanyName">LeeHolmes</S>
+      <Nil N="Copyright" />
+      <DT N="PublishedDate">2016-09-10T22:10:44-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <Nil N="LicenseUri" />
+      <Nil N="ProjectUri" />
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-Id3Tag</S>
+                <S>Set-Id3Tag</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="4" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="4" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-Id3Tag</S>
+                <S>Set-Id3Tag</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="4" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="description">Module for editing MP3 tags - based on TagLib# (https://github.com/mono/taglib-sharp/)</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">1742</S>
+          <S N="downloadCount">1752</S>
+          <S N="packageSize">174466</S>
+          <S N="published">9/10/2016 22:10:44 -06:00</S>
+          <S N="created">9/10/2016 22:10:44 -06:00</S>
+          <S N="lastUpdated">3/10/2021 05:06:51 -07:00</S>
+          <S N="tags">PSModule PSFunction_Get-Id3Tag PSCommand_Get-Id3Tag PSFunction_Set-Id3Tag PSCommand_Set-Id3Tag PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2021-03-10T05:06:51Z</S>
+          <S N="NormalizedVersion">1.1.0</S>
+          <S N="Authors">Lee Holmes</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">ID3.nuspec|id3.psd1|id3.psm1|taglib-sharp.dll</S>
+          <S N="GUID">9dc44836-916e-4622-8d58-7e7857d9c91b</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Shane\Documents\practiceCode\PowerShell\psfiles\ID3\1.1</S>
+    </MS>
+  </Obj>
+</Objs>

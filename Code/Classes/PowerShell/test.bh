@@ -1,0 +1,52 @@
+#!/bin/bash
+read -p "Please enter a directory: " dir
+cd $pram1
+pwd
+ls
+
+if mv file1.dat file2.dat
+then 
+echo "success"
+else 
+echo "failure"
+fi
+
+if [[ $1 -gt $2]]
+then
+echo "$1 is greater than $2"
+elif [[ $1 -eq $2]]
+then
+echo "$1 is equal to $2"
+else 
+echo "$1 is less than $2"
+fi
+#nano .profile
+$ PATH=$PATH:/home/shimbo/bin
+
+read -p "Would you like to display all files? " ans
+case $ans in
+    Y|y|yes|Yes)
+        ls -a
+        ;;
+    N|n|no|No)
+        ls
+        ;;
+    *)
+        echo "invalid response"
+
+# loops
+# whlie loop
+((count = 1))
+while [[ $count -le 10 ]] ; do
+    echo $count
+    ((count++))
+done
+# for loop
+for ((count =  1; $count <= 10 ; count++ )) ; do
+    echo $count
+done
+# like foreach loop in powershell
+for fruit in apple banana pear peach  ; do
+    echo $fruit
+done
+# to password useradd passwp 
