@@ -13,5 +13,5 @@ class Metal {
 # $m2
 # $m3 = [metal]@{Symbol = 'Au'; Name = 'Gold' }
 # $m3
-$Metals = Import-Csv Metals.csv|ForEach-Object {[Metal]$_}
+$Metals = Import-Csv psfiles/data/Metals.csv |ForEach-Object {[Metal]$_}
 $Metals[0].GetType()

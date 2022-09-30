@@ -1,3 +1,9 @@
+# I take pride in this script it was correct on the first try and was one part of the final
+# for my OS2 class it was graded on a server that I had no access to so it had to work on any
+# Windows Server many students in my class had to submit more than one time to be graded the
+# I really enjoy powershell and wanted to do it on my own and only ask the professer one thing 
+# which was the "OU=$ou,$domian" part of creating the user
+
 # Create a Script named Manage-Users.ps1 that performs the following functions
 # 1. Allow user to input a filename to process.
 # a. Create a string parameter named filepath that accepts the name of the xml file to process. Provide an appropriate help message when parameter is not submitted.
@@ -77,6 +83,7 @@ foreach ($employee in $xml.root.user) {
     #add user if they have a manager
      else{
         New-ADUser -Name $full -AccountPassword $secpass -ChangePasswordAtLogon $True -Description $description -GivenName $first -Surname $last -Enabled $True -Manager $manager -SamAccountName $account -Path "OU=$ou,$domian"
+
    }
     #catch { Write-Host "ERROR ADDING USER: $account" -ForegroundColor Red }
  
