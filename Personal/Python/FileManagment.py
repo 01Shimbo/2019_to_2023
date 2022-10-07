@@ -3,7 +3,7 @@ using os.path.join is much more consistant than
 using double backslash puls works accross differnt OS
     
 '''
-import os 
+import glob, os 
 path = os.path.join ('C:','Users', 'Shane', 'OneDrive', 'Pictures', 'Saved Pictures')
 # isExist = os.path.exists(path)
 # print(path)
@@ -21,3 +21,8 @@ docpathExist = os.path.exists(docpath)
 print (docpathExist)
 print(docpath)
 
+'''
+using glob.glob allows for wildcards
+'''
+for name in glob.glob('/home/geeks/Desktop/gfg/*'):
+    print(name)
