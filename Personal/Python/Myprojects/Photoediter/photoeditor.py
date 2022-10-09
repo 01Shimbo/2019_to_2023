@@ -1,5 +1,5 @@
 from importlib.resources import path
-from PIL import Image, ImageEnhance, ImageFilter
+from PIL import Image, ImageEnhance, ImageFilter, ImageColor
 import os
 
 # get path varables to get imgs and send imgs   
@@ -29,6 +29,7 @@ for path in os.listdir(pathIn):
         # print(os.path.join(pathIn, path))
         # opens img
         img = Image.open(f"{pathIn}/{path}")
-        edit = img.filter(ImageFilter.SHARPEN)
+        edit = img.Image.
         edit.save(f"{pathOut}/{path}")
 # print(os.path)
+print("completed")
