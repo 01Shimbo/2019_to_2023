@@ -30,14 +30,11 @@ for path in os.listdir(pathIn):
     if os.path.isfile(os.path.join(pathIn, path)):
         # if true increase count
         count += 1
-        # print path
-        # print(os.path.join(pathIn, path))
-        # opens img
+        # open image
         img = Image.open(f"{pathIn}/{path}")
-        
-        # make image gray
-        edit = img.convert('L')
 
+        # edit image grayscale
+        edit = img.convert('L')
         # converts to RGBA
         edit = img.convert('RGBA')
 
@@ -45,12 +42,17 @@ for path in os.listdir(pathIn):
         for item in edit.getdata():
             # matches each pixel that is white
             if item[:3] == (255, 255, 255):
-                newImage.append ((255, 255, 255, 0))
+                # change the pixel to be opacity to 0
+                newImage.append((255, 255, 255, 0))
             else:
+                # Array.append(value) adds to the end of the array
                 newImage.append(item)
-            
+            # putdata is a PIL method Image.putdata(data, scale=1.0, offset=0.0)
+            # Copies pixel data to this image. This method copies data from a sequence object into the image
             edit.putdata(newImage)
 
+        # save data to pathOut
         edit.save(f"{pathOut}/{path}")
-# print(os.path)
+
+
 print("completed")
