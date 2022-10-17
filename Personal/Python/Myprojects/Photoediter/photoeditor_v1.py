@@ -37,15 +37,15 @@ for path in os.listdir(pathIn):
         edit = img.convert('L')
         threshold = 90
     
-
+        print(edit.point())
         edit = edit.point(
             # short hand way of making a value that is above or below
-            # threshold a 255 or 0 
+            # threshold a 255 or 0 depending on which side of the threshold
             lambda x: 255 if x > threshold else 0
             )
         # converts to RGBA
-        edit = edit.convert('RGBA')
-        newData = []
+        # edit = edit.convert('RGBA')
+        # newData = []
 
         # gets each pixel value
         # for item in edit.getdata():
