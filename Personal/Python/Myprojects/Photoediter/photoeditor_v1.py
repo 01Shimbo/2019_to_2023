@@ -1,6 +1,7 @@
 from importlib.resources import path
 from PIL import Image, ImageEnhance, ImageFilter, ImageColor
 import os
+import numpy as np
 
 # get path varables to get imgs and send imgs
 pathIn = os.path.join(os.path.expanduser(
@@ -36,33 +37,41 @@ for path in os.listdir(pathIn):
         # edit image grayscale
         edit = img.convert('L')
         threshold = 90
-    
-        print(edit.point())
+
         edit = edit.point(
             # short hand way of making a value that is above or below
             # threshold a 255 or 0 depending on which side of the threshold
             lambda x: 255 if x > threshold else 0
-            )
+        )
         # converts to RGBA
-        # edit = edit.convert('RGBA')
-        # newData = []
+        edit = edit.convert('RGBA')
+        data = np.array(edit)
+        white = [255, 255, 255, 255]
+        black = [0, 0, 0, 255]
+        whitedata = np.where(data == white)
+        print (data)
+        mask = np.all(data == black, axis=-1)
+        data[mask] = white
+        new_im = Image.fromarray(data)
 
-        # gets each pixel value
+        # # gets each pixel value
         # for item in edit.getdata():
         #     # matches each pixel that is white
         #     if item[:3] == (255, 255, 255):
         #         # change the pixel to be opacity to 0
-        #         newImage.append((255, 255, 255, 0))
+        #         # newImage.append((255, 255, 255, 0))
+        #         print(item)
         #     else:
         #         # Array.append(value) adds to the end of the array
-        #         newImage.append(item)
+        #         # newImage.append(item)
+        #         print(item)
         #     # putdata is a PIL method Image.putdata(data, scale=1.0, offset=0.0)
         #     # Copies pixel data to this image. This method copies data from a sequence object into the image
         #     edit.putdata(newImage)
 
         # save data to pathOut
 
-        edit.save(f"{pathOut}/{path}", "PNG")
+        new_im.save(f"{pathOut}/{path}", "PNG")
 
 
 print("completed")
