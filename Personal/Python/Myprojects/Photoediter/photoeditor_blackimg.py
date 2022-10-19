@@ -4,30 +4,14 @@ import os
 import numpy as np
 # this photoscript creates a black and white photo then makes the white background transparent leaving a black image
 
-
-
-
-# edit threshold tell black outline is wanted
-threshold = 90
-
 # get path varables to get imgs and send imgs
 pathIn = os.path.join(os.path.expanduser(
     '~'), 'Documents', 'pyPhotoeditor', 'Input')
 pathOut = os.path.join(os.path.expanduser(
     '~'), 'Documents', 'pyPhotoeditor', 'Output')
 
-# create path for data in
-pathInExist = os.path.exists(pathIn)
-if pathInExist == False:
-    os.makedirs(pathIn)
-    print(f'New path created: {pathIn}')
-
-# create path for data out
-pathOutExist = os.path.exists(pathOut)
-if pathOutExist == False:
-    os.makedirs(pathOut)
-    print(f'New path created: {pathOut}')
-
+# edit threshold tell black outline is wanted
+threshold = 90
 
 # loops through pixel data to make white transparent
 def remove_white(img):
@@ -57,25 +41,24 @@ def numpy_remove_white(img):
     # create array of imput image
     # copy array because image is out of function
     img = np.asarray(img.convert('RGBA')).copy()
+    # ignore the x,y value and only adjust the 4th vaule 'A'
+    # if RGB is 255 
     img[:, :, 3] = (255 * (img[:, :, :3] != 255).any(axis=2)).astype(np.uint8)
     return Image.fromarray(img)
 
 
 # List all the files in the pathin dir
 for path in os.listdir(pathIn):
-    # os.path.isfile returns T/F. if true create path to image
-    if os.path.isfile(os.path.join(pathIn, path)):
-        # if true increase count
-        # open image
-        img = Image.open(f"{pathIn}/{path}")
+    # open image
+    img = Image.open(f"{pathIn}/{path}")
 
-        # edit image grayscale
-        grayscale = img.convert('L')
-        blackAndWhite = grayscale.point(
-            # short hand way of making a value that is above or below
-            # threshold a 255 or 0 depending on which side of the threshold
-            lambda x: 255 if x > threshold else 0
-        )
+    # edit image grayscale
+    grayscale = img.convert('L')
+    blackAndWhite = grayscale.point(
+        # short hand way of making a value that is above or below
+        # threshold a 255 or 0 depending on which side of the threshold
+        lambda x: 255 if x > threshold else 0
+    )
     # removed because it takes too long
     # blackImage = remove_white(blackAndWhite)
     # call remove_white function
