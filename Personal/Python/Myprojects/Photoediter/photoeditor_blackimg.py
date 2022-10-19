@@ -42,7 +42,7 @@ def numpy_remove_white(img):
     # copy array because image is out of function
     img = np.asarray(img.convert('RGBA')).copy()
     # ignore the x,y value and only adjust the 4th vaule 'A'
-    # if RGB is 255 
+    # if RGB == 255 (white) make 'A' transparent
     img[:, :, 3] = (255 * (img[:, :, :3] != 255).any(axis=2)).astype(np.uint8)
     return Image.fromarray(img)
 
