@@ -1,0 +1,10 @@
+Version: '3.9'
+services:
+  frontend:
+    image: httpd:lastest
+    Container_name: apache
+    ports:
+      - "443:443"
+     - "80:80"
+    volumes:
+    ./website:/2019_to_2023/Personal/Python/Myprojects/LAMP/Apache
