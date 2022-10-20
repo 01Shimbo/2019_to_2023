@@ -2,6 +2,7 @@ Version: '3.9'
 services:
   frontend:
     image: httpd:lastest
+    restart: always
     Container_name: apache
     ports:
       - "443:443"
