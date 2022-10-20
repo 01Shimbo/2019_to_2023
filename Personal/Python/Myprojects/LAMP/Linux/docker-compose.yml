@@ -1,7 +1,7 @@
 Version: '3.9'
 services:
   frontend:
-    image: httpd:lastest
+    image: httpd:latest
     restart: always
     Container_name: apache
     ports:
