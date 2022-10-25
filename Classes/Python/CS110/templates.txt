@@ -1,0 +1,6 @@
+"""
+File: CS110_L01_Assignment
+Author: Shane Duke
+
+Purpose: Greet the world.
+"""
