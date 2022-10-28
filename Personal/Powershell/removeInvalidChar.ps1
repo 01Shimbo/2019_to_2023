@@ -1,6 +1,6 @@
-# param($showpath)
-$showpath = '\\SHIMBOVAULT\shimbovault\Media\Anime\GrandmasterOfDemonicCultivation\Season 2' + "\*"
-$files = Get-ChildItem -Path $showpath -Recurse | ForEach-Object { $_.FullName } 
+param($path)
+# $path = "$env:HOMEPATH" + "\*"
+$files = Get-ChildItem -Path $path -Recurse | ForEach-Object { $_.FullName } 
 foreach ($filepath in $files) {
     $file = $filepath.Split('\')
     $filepath
