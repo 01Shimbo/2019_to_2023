@@ -1,6 +1,6 @@
-param($jsonpath,$showpath,$showname)
+param($jsonpath,$path,$name)
 
-$filepath = Get-ChildItem -Path $showpath | % { @{Path = $_.fullname } }
+$filepath = Get-ChildItem -Path $path | % { @{Path = $_.fullname } }
 $shows = Get-Content $jsonpath | ConvertFrom-Json
 $episodeArray = $shows.episodes.episode
 $episodeTitle = $shows.episodes.title 
@@ -44,8 +44,8 @@ do {
         # write-host "Episode $($se) path: $($filepath[$i].Values) Title: $($episodeTitle[$i])";
         if ($se | Where-Object { $_ -eq $se }) {
             Write-host "Rename will start" -ForegroundColor Yellow
-            Write-Host "Rename-Item -path $($filepath[$i].Values) -NewName "$showname_$($episodeTitle[$i])-$($se)"" -ForegroundColor Green
-            Rename-Item -path $($filepath[$i].Values) -NewName $showname"_""$($episodeTitle[$i])-$($se)"
+            Write-Host "Rename-Item -path $($filepath[$i].Values) -NewName "$name_$($episodeTitle[$i])-$($se)"" -ForegroundColor Green
+            Rename-Item -path $($filepath[$i].Values) -NewName $name"_""$($episodeTitle[$i])-$($se)"
             # Write-host true -ForegroundColor Green
         } 
         else { Write-Host "|$($e)| does note equal |$($episode)|" -ForegroundColor Red }   
