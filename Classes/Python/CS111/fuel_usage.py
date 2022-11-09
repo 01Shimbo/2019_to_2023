@@ -1,56 +1,44 @@
 
 def main():
-    print("Input type")
-    print("Metric:   1")
-    print("Imperial: 2")
-    inputType = input("")
 
-    if inputType == "1":
-        startKm = float(input("Enter the first odometer reading (km): "))
-        endKm = float(input("Enter the second odometer reading (km): "))
-        liters = float(input("Enter the amount of fuel used (L): "))
+    startMiles = float(input("Enter the first odometer reading (miles): "))
+    endMiles = float(input("Enter the second odometer reading (miles): "))
+    gallons = float(input("Enter the amount of fuel used (gallons): "))
 
-    if inputType == "2":
-        startMiles = float(input("Enter the first odometer reading (miles): "))
-        endMiles = float(input("Enter the second odometer reading (miles): "))
-        gallons = float(input("Enter the amount of fuel used (gallons): "))
+# checks to see if metric input needs to be converted to imperial
+    mpg = miles_per_gallon(startMiles, endMiles, gallons)
+    lp100k = lp100k_from_mpg(mpg)
 
-    # checks to see if metric input needs to be converted to imperial
-    if inputType == "2":
-        get_imperial(startMiles, endMiles, gallons)
-
-    # checks to see if metric input needs to be converted to imperial
-    if inputType == "1":
-        get_metric(startKm, endKm, liters)
-
-    # print mpg output
-        miles_per_gallon(startMiles, endMiles, gallons)
-    # print Km per L output
-        kilometers_per_liter(startKm, endKm, liters)
+    print(f'{mpg:.1f} miles per gallon')
+    print(f'{lp100k:.2f} liters per 100 kilometers')
+# checks to see if metric input needs to be converted to imperial
+# print mpg output
+# print Km per L output
 
 
-def get_imperial(startKm, endKm, liters):
-    startMiles = startKm / 1.609344
-    endMiles = endKm / 1.609344
-    gallons = liters * 3.78541178
-    return startMiles, endMiles, gallons
+def lp100k_from_mpg(mpg):
+    """Convert miles per gallon to liters per 100
+    kilometers and return the converted value.
 
-
-def get_metric(startMiles, endMiles, gallons):
-    startKm = startMiles * 1.609344
-    endKm = endMiles * 1.609344
-    liters = gallons / 3.78541178
-    return startKm, endKm, liters
+    Parameter mpg: A value in miles per gallon
+    Return: The converted value in liters per 100km.
+    """
+    lp100k = 235.215 / mpg
+    return lp100k
 
 
 def miles_per_gallon(startMiles, endMiles, gallons):
-    mpg = (startMiles - endMiles) / gallons
-    print(f'{mpg} miles per gallon')
+    """Compute and return the average number of miles
+    that a vehicle traveled per gallon of fuel.
 
-
-def kilometers_per_liter(startKm, endKm, liters):
-    kmpl = (startKm - endKm) / liters
-    print(f'{kmpl} miles per gallon')
+    Parameters
+        start_miles: An odometer value in miles.
+        end_miles: Another odometer value in miles.
+        amount_gallons: A fuel amount in U.S. gallons.
+    Return: Fuel efficiency in miles per gallon.
+    """
+    mpg = abs(startMiles - endMiles) / gallons
+    return mpg
 
 
 if __name__ == "__main__":
