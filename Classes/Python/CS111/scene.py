@@ -32,7 +32,7 @@ def draw_sky(canvas, scene_width, scene_height):
     # objects in the sky
     draw_sun(canvas)
     draw_cloud(canvas)
-    draw_bird(canvas)
+    draw_bird(canvas, 200, 550)
 
 
 def draw_ground(canvas, scene_width, scene_height):
@@ -50,11 +50,10 @@ def draw_ground(canvas, scene_width, scene_height):
 
     # draw the grass
 
-    draw_grass(canvas, 260 ,30)
-    draw_grass(canvas, 190 ,60)
-    draw_grass(canvas, 600 ,45)
-    draw_grass(canvas, 65 , 60)
-
+    draw_grass(canvas, 260, 30)
+    draw_grass(canvas, 190, 60)
+    draw_grass(canvas, 600, 45)
+    draw_grass(canvas, 65, 60)
 
 
 def draw_sun(canvas):
@@ -67,7 +66,32 @@ def draw_cloud(canvas):
     draw_oval(canvas, 220, 430, 450, 470, outline="white", fill="white")
 
 
-def draw_bird(canvas):
+def draw_bird(canvas, x, y):
+
+    point_x = x
+    point_y = y
+
+    left_wing_x = x + 100
+    left_wing_y = y + 40
+    right_wing_x = x - 100
+    right_wing_y = y + 40
+
+    # # left wing 
+    # draw_arc(canvas, left_wing_x, point_y, point_x, left_wing_y, start=360,
+    #          extent=90, fill="black", width=2)
+    # # right wing
+    # draw_arc(canvas, point_x, point_y, right_wing_x, right_wing_y, start=90,
+    #          extent=90, fill="black", width=2)
+    
+    
+    # # left wing 
+    # draw_arc(canvas, right_wing_x, point_y, point_x, right_wing_y, start=360,
+    #          extent=90, fill="black", width=2)
+    # # right wing
+    # draw_arc(canvas, point_x, point_y, left_wing_x, left_wing_y, start=90,
+    #          extent=90, fill="black", width=2)
+
+
     draw_arc(canvas, 350, 300, 450, 340, start=360,
              extent=90, fill="black", width=2)
     draw_arc(canvas, 450, 300, 550, 340, start=90,
@@ -92,7 +116,7 @@ def draw_flower(canvas, x, y):
     flower_peddels_upper_y = y + 50
 
     draw_rectangle(canvas, stem_lower_x, stem_lower_y,
-                   stem_upper_x, stem_upper_y, fill="green")
+                   stem_upper_x, stem_upper_y, fill="green3", outline="green3")
     draw_oval(canvas, flower_bottom_lower_x, flower_bottom_lower_y,
               flower_bottom_upper_x, flower_bottom_upper_y, fill="red", outline="red")
     draw_rectangle(canvas, flower_peddels_lower_x, flower_peddels_lower_y,
@@ -100,8 +124,10 @@ def draw_flower(canvas, x, y):
 
 
 def draw_tree(canvas):
-    draw_rectangle(canvas, 600, 100, 630, 250, fill="saddleBrown")
-    draw_polygon(canvas, 550, 150, 615, 480, 680, 150, fill="darkGreen")
+    draw_rectangle(canvas, 600, 100, 630, 250,
+                   fill="saddleBrown", outline="saddleBrown")
+    draw_polygon(canvas, 550, 150, 615, 480, 680, 150,
+                 fill="darkGreen", outline="darkGreen")
 
 
 def draw_grass(canvas, x, y):
@@ -123,17 +149,12 @@ def draw_grass(canvas, x, y):
     right_y = y + 5
 
     draw_arc(canvas, base_x, base_y, left_lower_x, left_lower_y, start=1,
-             extent=90, fill=color, width=3, outline=color)
+             extent=90, fill=color, width=2, outline=color)
     draw_arc(canvas, base_x, base_y, left_upper_x, left_upper_y, start=1,
              extent=90, fill=color, width=2, outline=color)
     draw_arc(canvas, right_base_x, right_base_y, right_x, right_y, start=90,
              extent=90, fill=color, width=2, outline=color)
 
 
-# Define your functions such as
-# draw_sky and draw_ground here.
-
-# Call the main function so that
-# this program will start executing.
 if __name__ == "__main__":
     main()
