@@ -11,6 +11,7 @@ What would you like to do?
 [R] Rock
 [P] Paper
 [S] Scissors
+
 '@
 switch ($p) {
     'R' { $p = 'playRock' }
