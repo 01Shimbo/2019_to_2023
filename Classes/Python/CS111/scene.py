@@ -1,10 +1,10 @@
 # Import the functions from the Draw 2-D library
 # so that they can be used in this program.
-import os
-lib = os
 from draw2d import \
     start_drawing, draw_line, draw_oval, draw_arc, \
     draw_rectangle, draw_polygon, draw_text, finish_drawing
+import os
+lib = os
 
 
 def main():
@@ -77,21 +77,19 @@ def draw_bird(canvas, x, y):
     right_wing_x = x - 100
     right_wing_y = y + 40
 
-    # # left wing 
+    # # left wing
     # draw_arc(canvas, left_wing_x, point_y, point_x, left_wing_y, start=360,
     #          extent=90, fill="black", width=2)
     # # right wing
     # draw_arc(canvas, point_x, point_y, right_wing_x, right_wing_y, start=90,
     #          extent=90, fill="black", width=2)
-    
-    
-    # # left wing 
+
+    # # left wing
     # draw_arc(canvas, right_wing_x, point_y, point_x, right_wing_y, start=360,
     #          extent=90, fill="black", width=2)
     # # right wing
     # draw_arc(canvas, point_x, point_y, left_wing_x, left_wing_y, start=90,
     #          extent=90, fill="black", width=2)
-
 
     draw_arc(canvas, 350, 300, 450, 340, start=360,
              extent=90, fill="black", width=2)
