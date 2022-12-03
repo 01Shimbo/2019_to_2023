@@ -4,7 +4,7 @@ from datetime import datetime
 def main():
     subtotal = float(input("subtotal: $"))
     salesTax = subtotal - (subtotal / 1.06)
-    # dayOfWeek = datetime.now().weekday()
+    dayOfWeek = datetime.now().weekday()
     dayOfWeek = 2
     if subtotal <= 50 and dayOfWeek == 1 or dayOfWeek == 2:
         isDiscount = True

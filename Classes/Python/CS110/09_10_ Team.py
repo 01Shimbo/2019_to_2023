@@ -27,7 +27,7 @@ while True:
         break
 
     else:
-        print("something is wronge")
+        print("something is wrong")
 
 
 account_list = ["checking", "savings"]
