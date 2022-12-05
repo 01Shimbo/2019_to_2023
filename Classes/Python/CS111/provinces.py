@@ -1,4 +1,3 @@
-import csv 
 def main():
     provences = read_list("provinces.txt")
     print(provences)
