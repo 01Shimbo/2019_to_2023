@@ -1,0 +1,18 @@
+Please respond thoroughly (at least two sentences for each question) to
+the following three questions.
+
+1. Describe an experience you had this semester where you saw the power of
+functions.
+
+I saw the power of functions during the scene program we can call them in different filles and the same file.
+
+2. In your judgment, what is the value of test functions?
+
+test functions allow for people to make a test script to start debugging while a different person can make the code.
+
+3. Describe your process for troubleshooting and fixing a program that
+has a problem. What is one thing you can do to improve your process?
+
+I use Jupiter notebooks which allows code to be ran block by block.
+I need to use debugging tools more often when I get unexpected results 
+because those tools can tell you the value of variables while the code is running.

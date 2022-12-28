@@ -1,33 +1,33 @@
-input_list = [3, 5, 7, 3, 2, -1, -4, -8, 0]
-num_list = []
-while True:
-    # num = int(input("put in number: "))
-    for num in input_list:
-        num_list.append(num)
-    small = 10000000000000000000
-    if num == 0:
-        sum = 0
-        count = 0
-        for i in num_list:
-            count += 1
-            sum += i
+# input_list = [3, 5, 7, 3, 2, -1, -4, -8, 0]
+# num_list = []
+# while True:
+#     # num = int(input("put in number: "))
+#     for num in input_list:
+#         num_list.append(num)
+#     small = 10000000000000000000
+#     if num == 0:
+#         sum = 0
+#         count = 0
+#         for i in num_list:
+#             count += 1
+#             sum += i
 
-            if i < small and i > 0:
-                small = i
-        print (small)
+#             if i < small and i > 0:
+#                 small = i
+#         print (small)
 
 
-        avg = sum / count
+#         avg = sum / count
 
-        print(f"sum: {sum}")
-        print(f"avg: {avg:.2f}")
-        print(f"max number is: {max(num_list)}")
-        print(f"min number is: {small}")
+#         print(f"sum: {sum}")
+#         print(f"avg: {avg:.2f}")
+#         print(f"max number is: {max(num_list)}")
+#         print(f"min number is: {small}")
 
-        break
+#         break
 
-    else:
-        print("something is wrong")
+#     else:
+#         print("something is wrong")
 
 
 account_list = ["checking", "savings"]

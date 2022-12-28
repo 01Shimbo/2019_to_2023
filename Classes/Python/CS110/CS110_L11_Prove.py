@@ -55,7 +55,7 @@ def main():
         # gets avg of inputted year
         line = results[i]
         avg += float(line[LIFE_EXPECTANCY])
-    avg = avg / (i+1)
+    avg = avg / (i + 1)
 
     print(
         f"\nThe overall max life expectancy is: {highest_reported_entity[LIFE_EXPECTANCY]} from {highest_reported_entity[ENTITY]} in {highest_reported_entity[YEAR]  }")

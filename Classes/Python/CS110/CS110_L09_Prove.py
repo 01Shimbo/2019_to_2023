@@ -13,9 +13,12 @@ def main():
             price = float(price)
             print (f"'{i}' has been added to the cart.")
             shoping_cart.append([i ,price])
+            if shoping_cart[0] == []:
+                shoping_cart.pop(0)
         # View cart 
         elif action == "2":
-            if shoping_cart != []:
+            if shoping_cart != [[]]:
+                
                 count = 0
                 for i, price in shoping_cart:
                     count += 1

@@ -10,15 +10,23 @@ CSE 111 Proposal for a Student Chosen Program
     knowledge.)
 
 1. What is the title of your program?
+    how_to_use_numpy.py
 
 2. What real-world problem will your program address or help to solve?
+    Although dictionaries are extremely efficient and provide quick resaults it is not always possible to use one. 
+    I have seen numpy used in stackoverflow but do not know how to use it. looking though a numpy list much faster than a for in loop with a normal list.
+    I wiould like to demenstrate the speed of numpy over normal list.
 
 3. What will you learn from developing this program?
+   I'm hoping to learn how numpy works I will create a program
+    that will help explain how it works via comments in my code and a small demo. 
 
 4. What Python modules will your program use?
-
     (Some examples are: csv, datetime, functools, matplotlib, math,
     pandas, pytest, random, requests, and tkinter.)
+
+    os, numpy, csv and, requests
+
 
 5. Will you separate your Python program into functions that each
 perform a single task?
@@ -34,6 +42,19 @@ perform a single task?
     a result. Therefore, you should write most of your program functions
     to have parameters and return a result.)
 
+    I need a fucntion to
+        main
+        request data from website
+        put data into list
+        put data into numpy list
+        get time to run program 
+          
+
+
+
 6. Will you write test functions to test at least two of your program
 functions?
+
+    test the changed data 
+    test the read file
 

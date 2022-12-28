@@ -1,0 +1,51 @@
+First Report for a Student Chosen Project
+
+    (Please report on your progress toward completing your chosen
+    project by answering the following questions.)
+
+1. In the table below, list the dates, amount of time spent, and
+description of the work that you did on your project. Follow the example
+that is in the first row of the table below. Include the time you spent
+doing any of the following:
+    a. discussing your project with your teacher, tutor, or fellow students
+    b. researching by reading articles and watching applicable videos
+    c. designing your project by drawing diagrams and other applicable documents
+    d. writing experimental code
+    d. writing code for your project
+    e. writing test functions
+    f. debugging your code
+    g. any other activity that helped you complete your project
+
+            Time Spent
+   Date       (hours)   Description of Work
+----------  ----------  -------------------------
+2022-12-9      1         Read tutorials about the Python requests module
+2022-12-9      2         Reading tutorials on numpy
+2022-12-9      1         reading tutorials on how to get time to complete a python script
+
+
+2. Write the names of the functions in your project.
+    main
+    get_np_data
+    get_normal_data
+    get_time_to_compute
+
+3. Answer the following questions about the functions in your project.
+    a. Does each function perform a single task?
+    yes
+
+    b. Does the name of each function describe or convey the task?
+    yes
+
+    c. Do most of your project functions have parameters and return a result?
+    yes
+
+    If you answered "no" to any of the above three questions, what are
+    you planning to change in your project?
+
+
+4. Write the names of the test functions that you wrote to test your
+program functions.
+
+    test_data_out
+    test_data_search

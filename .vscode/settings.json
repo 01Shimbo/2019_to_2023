@@ -1,3 +1,4 @@
 {
-    "editor.fontFamily": "'Fira code', monospace"
+    "editor.fontFamily": "'Fira code', monospace",
+    "python.analysis.typeCheckingMode": "basic"
 }
