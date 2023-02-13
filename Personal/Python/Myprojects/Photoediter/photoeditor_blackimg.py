@@ -15,6 +15,11 @@ threshold = 90
 
 # loops through pixel data to make white transparent
 def remove_white(img):
+    """ Summary: Efficient way to change white pixels using numpy 
+
+    Returns:
+        image: white pixels are transparent
+    """
     blackAndWhiteRGBA = img.convert('RGBA')
     newImage = []
     for item in blackAndWhiteRGBA.getdata():
@@ -30,11 +35,6 @@ def remove_white(img):
     blackImage = blackAndWhiteRGBA.putdata(newImage)
     return blackImage
 
-    """ Summary: Efficient way to change white pixels using numpy 
-
-    Returns:
-        image: white pixels are transparent
-    """
 
 
 def numpy_remove_white(img):
