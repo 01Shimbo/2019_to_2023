@@ -1,0 +1,4 @@
+-- Select Name, Population from country Where Population < 5000000 order by Population desc;
+-- select distinct Language from countrylanguage order by Language asc;
+-- Select Continent, count(Name) as number_of_countries from country group by Continent;
+-- Select country.Name as Country, country.Population as National_Population, city.Population as Urban_Population from country join city on country.Code = city.CountryCode group by country.Name

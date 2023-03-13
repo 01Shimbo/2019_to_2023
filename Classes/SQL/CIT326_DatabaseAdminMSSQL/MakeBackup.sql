@@ -1,0 +1,8 @@
+-- BACKUP DATABASE [BowlingLeagueExample] TO  DISK =N'E:\Databases\Backups\BowlingLeagueExample' WITH NOFORMAT, NOINIT,  NAME = N'BowlingLeagueExample-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
+-- BACKUP DATABASE [EntertainmentAgencyExample] TO  DISK =N'E:\Databases\Backups\EntertainmentAgencyExample.bak' WITH NOFORMAT, NOINIT,  NAME = N'EntertainmentAgencyExample-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
+-- BACKUP DATABASE [RecipesExample] TO  DISK =N'E:\Databases\Backups\RecipesExample.bak' WITH NOFORMAT, NOINIT,  NAME = N'RecipesExample-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
+-- BACKUP DATABASE [SalesOrdersExample] TO  DISK = N'E:\Databases\Backups\SalesOrdersExample.bak' WITH NOFORMAT, NOINIT,  NAME = N'SalesOrdersExample-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
+-- BACKUP DATABASE [sample] TO  DISK = N'E:\Databases\Backups\sample.bak' WITH NOFORMAT, NOINIT,  NAME = N'SalesOrdersExample-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
+-- BACKUP DATABASE [sample_TEST] TO  DISK = N'E:\Databases\Backups\sample_TEST.bak' WITH NOFORMAT, NOINIT,  NAME = N'SalesOrdersExample-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
+-- BACKUP DATABASE [SchoolSchedulingExample] TO  DISK = N'E:\Databases\Backups\SchoolSchedulingExample.bak' WITH NOFORMAT, NOINIT,  NAME = N'SalesOrdersExample-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
+-- BACKUP DATABASE [WideWorldImporters] TO  DISK = N'E:\Databases\Backups\WideWorldImporters.bak' WITH NOFORMAT, NOINIT,  NAME = N'SalesOrdersExample-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
