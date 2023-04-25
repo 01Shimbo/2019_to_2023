@@ -5,6 +5,9 @@ import re
 
 
 def main():
+
+    f = open("rpshistory.txt", "w+")
+    f.close()
     history_path = os.path.join(pathlib.Path().resolve(), 'rpshistory.txt')
     player_w = 0
     ai_w = 0
@@ -12,7 +15,7 @@ def main():
     while player_choice != 'q':
         probability = get_probablity(history_path)
         ai_play = get_ai_play(probability)
-        print(ai_play)
+        # print(ai_play)
         player_choice = get_player_choice(history_path)
         if player_choice == 'q':
             break
@@ -110,9 +113,9 @@ def get_ai_play(probability):
     rock_prob = probability[0]
     paper_prob = probability[1]
     scissors_prob = probability[2]
-    print(f'rock prob: {rock_prob}')
-    print(f'paper_prob: {paper_prob}')
-    print(f'scissors_prob: {scissors_prob}')
+    # print(f'rock prob: {rock_prob}')
+    # print(f'paper_prob: {paper_prob}')
+    # print(f'scissors_prob: {scissors_prob}')
     ai_play = ''
     greatest_prob = max(rock_prob, scissors_prob, paper_prob)
     if greatest_prob == rock_prob and greatest_prob == scissors_prob and greatest_prob == paper_prob:
